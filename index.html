@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martin Stavrakov</title>
-    <link rel="stylesheet" href="./myCV.css">
+    <link rel="stylesheet" href="myCV.css">
+    <link rel="stylesheet" href="./scssFile.scss" type="css">
     <script src="https://kit.fontawesome.com/1e16c8ff60.js" crossorigin="anonymous"></script>
 
 </head>
@@ -22,12 +23,19 @@
     <section id="Home">
     <div class="container">
         <div class="description">
-           <h2>Martin Stavrakov</h2>
-           <p><span>Welcome</span> to my personal page where you can learn more about me, my education and my goals!</p>
+           <h2>Hello and Welcome to my personal page &#128075;</h2>
+           <p> My name is <span>Martin Stavrakov</span> and I am a full stack software developer who has a big passion for <span>Front end development</span>. You can find more about me and my other projects here!</p>
+           <div class="links">
+            <a href="https://github.com/m-stavrakov" data-tool-tip="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto: m.stavrakov@gmail.com" data-tool-tip="Gmail"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.instagram.com/m.stavrakov98/" data-tool-tip="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/martin-stavrakov-7b1625199/" data-tool-tip="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
         </div>
         <img class="first-img" src="./images/Developper_01__Converted__generated.jpg" alt="developer" width="30%">
     </div>
     </section>
+
 
     <section id="About-me">
         <div class="container">
@@ -42,8 +50,17 @@
 
     <section  id="skills" class="skills-section">
         <h2>Skills</h2>
-        <div class="grid-container items">
-            <div>
+        <div class="grid-container">
+            <i class="fa-brands fa-square-js fa-2xl"></i>
+            <i class="fa-brands fa-python fa-2xl"></i>
+            <i class="fa-brands fa-html5 fa-2xl"></i>
+            <i class="fa-brands fa-css3-alt fa-2xl"></i>
+            <i class="fa-brands fa-react fa-2xl"></i>
+            <i class="fa-solid fa-database fa-2xl"></i>
+            <i class="fa-brands fa-node-js fa-2xl"></i>
+            <i class="fa-brands fa-bootstrap fa-2xl"></i>
+            <i class="fa-brands fa-wordpress fa-2xl"></i>
+            <!-- <div>
                 <i class="fa-brands fa-square-js fa-2xl"></i>
                 <h3>Java Script</h3>
             </div>
@@ -78,22 +95,42 @@
             <div>
                 <i class="fa-brands fa-wordpress fa-2xl"></i>
                 <h3>Wordpress</h3>
-            </div>
+            </div> -->
         </div>
     </section>
 
-    <section id="contact-me">
-        <a><h2>Let's connect</h2></a>
-        <div class="socials">
-        <img src="./images/Project_76-03.jpg" alt="connect" width="40px">
-            <div class="links">
-        <p>You can reach me on:</p>
-        <a href="https://github.com/m-stavrakov"><i class="fa-brands fa-github"></i></a>
-        <a href="mailto: m.stavrakov@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://www.instagram.com/m.stavrakov98/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/martin-stavrakov-7b1625199/"><i class="fa-brands fa-linkedin"></i></a>
+        <a id="contact-me"><h2>Let's connect</h2></a>
+
+    <section class="contact-form">
+        <form class="form" action="#" name="contact-me" autocomplete="on">
+            <label for="full-name">Full Name <input class="input" type="text" placeholder="Ben Sims" name="full-name" id="full-name" autocomplete="name" minlength="4" aria-label="first-name" tabindex="3" required/>
+            </label>
+
+            <label for="email">Email Address <input class="input" type="text" placeholder="yourname@email.com" autocomplete="email" id="email" required/>
+            </label>
+
+            <label for="phone-number">Phone Number <input class="input" type="text" type="number" placeholder="+44 900 456 123" required/>
+            </label>
+
+            <fieldset>
+                <legend>How should I contact you?</legend>
+                <input type="checkbox" name="email" id="email" />
+                <label for="email">Email</label>
+                <input type="checkbox" name="phone" id="phone" />
+                <label for="phone">Phone</label>
+            </fieldset>
+
+            <button>Submit</button>
+        </form>
+        <div class="image-container">
+            <div class="card">
+            <img class="hover-effect" src="./images/Project_76-03.jpg" alt="connect" width="350px">
+            
+            <div class="img-text">
+                <h3 class="img-title">Looking forward to meeting you!</h3>
+            </div>
         </div>
-    </div>
+        </div>
     </section>
 
     <footer>
