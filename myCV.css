@@ -172,63 +172,44 @@ a[data-tool-tip]:hover::after{
     flex-direction: column;
 }
 
-/* .skills-section a{
-    font-size: 30px;
-    font-weight: 700;
-    text-shadow: 3px 4px 8px var(--complimentary-color);
-    text-align: center;
-    margin: 2px;
-} */
-
-/* .grid-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    align-items: center;
-    padding: 10px;
-    margin-top: 4rem;
-    margin-bottom: 50px;
-    border-bottom: 2px solid var(--primary-color-text);
-} */
-
-.grid-container{
-    /* display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-between;
-    gap: 40px; */
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    grid-auto-rows: 10px; */
-    /* padding: 5px; */
-    /* background-color: var(--complimentary-color);
-    border-radius: 2rem;
-    margin: 1rem;
-    padding: 2rem;
-    font-size: 30px;
-    padding-top: 60px; */
-}
-
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5em;
+    grid-template-columns: repeat(3, 2fr);
+    grid-auto-rows: 100px;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 10em;
+    grid-row-gap: 5em;
     margin-top: 4em;
     text-shadow: 2px 2px #ed7b22;
     margin-bottom: 2em;
 }
 
-.grid-container>*{
-    place-self: center;
-    /* this combines justify-self and align-self */
+i[data-tool-tip]{
+    position: relative;
 }
 
-/* @media (max-width: 992px) {
-    .grid-container{
-        grid-template-columns: auto;
-    }
-} */
+i[data-tool-tip]::after{
+    content: attr(data-tool-tip);
+    display: block;
+    position: absolute;
+    background-color: var(--complimentary-color);
+    padding: 1em 2em;
+    color: white;
+    border-radius: 1em;
+    font-size: .2em;
+    letter-spacing: .2em;
+    bottom: 0;
+    left: 0;
+    white-space: nowrap;
+    transform: scale(0);
+    transition: transform ease-out 150ms, bottom ease-out 150ms;
+}
+
+i[data-tool-tip]:hover::after{
+    transform: scale(1);
+    bottom: 100%;
+}
 
 .contact-form{
     display: flex;
