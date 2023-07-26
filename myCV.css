@@ -228,6 +228,7 @@ i[data-tool-tip]:hover::after{
 .form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 2em;
     background-color: var(--accent-color);
     border-radius: 3em;
@@ -241,14 +242,22 @@ i[data-tool-tip]:hover::after{
     border: 1px solid #CCC;
     border-radius: .25em;
     box-shadow: 0px 2px 2px 2px var(--complimentary-color);
-    width: 15em;
-    height: 2em;
+    width: 100%;
+    height: 2.5em;
     padding-left: .5em;
 }
 
 fieldset{
     border: 0;
     padding-top: .5em;
+}
+
+.checkbox_space{
+    margin-left: 1.5em;
+}
+
+input[type=checkbox]{
+    accent-color: var(--complimentary-color);
 }
 
 button{
@@ -260,21 +269,14 @@ button{
     cursor: pointer;
 }
 
-@media (max-width: 932px) {
-    .contact-form{
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
 button:hover{
     background-color: #d56e1e;
     border-color: #d56e1e;
     transition: .3s ease-in-out;
 }
 
-.image-container{
-    width: auto;
+.image-container>img{
+    width: 20px;
     margin: 0 auto;
     /* display: flex;
     justify-content: center; */
@@ -323,7 +325,6 @@ button:hover{
 }
 
 .card>img{
-    max-width: 100%;
     display: block;
     transition: opacity ease-out 250ms;
 }
@@ -361,4 +362,8 @@ button:hover{
   }
 
 
-  
+  @media (max-width: 600px){
+    .skills-section{
+        display: block;
+    }
+  }
