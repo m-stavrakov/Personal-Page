@@ -191,14 +191,16 @@ i[data-tool-tip]{
 
 i[data-tool-tip]::after{
     content: attr(data-tool-tip);
-    display: block;
+    display: flex;
+    justify-content: center;
     position: absolute;
-    background-color: var(--complimentary-color);
     padding: 1em 2em;
-    color: white;
-    border-radius: 1em;
+    text-shadow: none;
+    color: var(--complimentary-color);
     font-size: .2em;
     letter-spacing: .2em;
+    font-weight: 700;
+    right: 0;
     bottom: 0;
     left: 0;
     white-space: nowrap;
@@ -357,3 +359,6 @@ button:hover{
     padding: 1em;
     color: white;
   }
+
+
+  
